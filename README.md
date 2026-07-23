@@ -23,10 +23,7 @@ This analysis answers key business questions, including:
 
 ## Dashboard
 
-> **Add your dashboard screenshot here**
-
-```markdown
-![Sales Dashboard](Images/dashboard.png)
+![Sales Dashboard](dashboard.png)
 ```
 
 The Power BI dashboard summarizes key business metrics, including:
