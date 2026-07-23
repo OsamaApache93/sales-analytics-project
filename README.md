@@ -105,22 +105,11 @@ The project uses a simple **star schema** consisting of one fact table and two d
 ```text
 sales-analytics-project
 │
-├── SQL
-│   ├── 01_Database_Exploration.sql
-│   ├── 02_Dimension_Exploration.sql
-│   ├── 03_Date_Analysis.sql
-│   ├── 04_Measures.sql
-│   ├── 05_Magnitude_Analysis.sql
-│   └── 06_Ranking_Analysis.sql
-│
-├── Dashboard
-│   └── Sales Dashboard.pbix
-│
-├── Images
-│   └── dashboard.png
-│
-└── README.md
+├── README.md
+├── Sales_Analytics_Analysis.sql
+└── dashboard.png
 ```
+
 
 ---
 
