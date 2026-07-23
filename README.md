@@ -1,83 +1,234 @@
- Sales Analytics Project (SQL)
+# 📊 Sales Analytics Project | SQL Server & Power BI
 
-🧠 Project Overview
-This project explores a retail sales dataset using SQL to uncover insights about **customers, products, and revenue**. The goal is to analyze sales trends, identify top-performing products and customers, and calculate key metrics for business decision-making.  
+## Project Overview
 
-The project demonstrates **data exploration, aggregation, ranking, and window functions** using SQL (T-SQL / SQL Server).  
+This project demonstrates an end-to-end sales analytics solution using **SQL Server (T-SQL)** and **Power BI**. The goal is to explore a retail sales database, analyze customer and product performance, and transform raw transactional data into meaningful business insights.
+
+The project highlights practical SQL skills used in real-world business intelligence, including data exploration, KPI reporting, customer analysis, product performance analysis, and dashboard development.
 
 ---
 
- 📦 Dataset
-The database consists of three main tables:
+## Business Objective
+
+This analysis answers key business questions, including:
+
+- Which countries generate the highest revenue?
+- Which product categories contribute the most to total sales?
+- Who are the highest-value customers?
+- Which products perform the best and worst?
+- What are the company's key sales KPIs?
+- How can these insights support better business decisions?
+
+---
+
+## Dashboard
+
+> **Add your dashboard screenshot here**
+
+```markdown
+![Sales Dashboard](Images/dashboard.png)
+```
+
+The Power BI dashboard summarizes key business metrics, including:
+
+- Total Sales
+- Total Orders
+- Total Customers
+- Total Products
+- Total Quantity Sold
+- Average Product Price
+- Average Order Value
+- Revenue by Category
+- Revenue by Country
+- Top Customers by Revenue
+
+---
+
+## Database Schema
+
+The project uses a simple **star schema** consisting of one fact table and two dimension tables.
+
+```text
+                dim_customers
+                      │
+                      │ CustomerID
+                      │
+                 fact_sales
+                      │
+                      │ ProductID
+                      │
+                dim_products
+```
+
+### Tables
 
 | Table | Description |
 |-------|-------------|
-| `gold.dim_customers` | Customer information, including `customer_key`, name, gender, birthdate, and country. |
-| `gold.dim_products`  | Product information, including `product_key`, name, category, subcategory, price, and cost. |
-| `gold.fact_sales`    | Sales transactions, including `order_number`, `customer_key`, `product_key`, `sales_amount`, `quantity`, `price`, and `order_date`. |
+| **fact_sales** | Sales transactions |
+| **dim_customers** | Customer information |
+| **dim_products** | Product information |
 
 ---
 
- 🛠 SQL Queries / Sections
-The project includes the following SQL analyses:
+## Technologies Used
 
-1. **Database Exploration**
-   - Inspect tables and columns in the database.
-   - Understand the structure of customers, products, and sales tables.
-
-2. **Dimension Exploration**
-   - Identify unique countries, product categories, and subcategories.
-
-3. **Date Analysis**
-   - Find first and last order dates.
-   - Calculate age range of customers.
-
-4. **Measures Exploration**
-   - Total sales, total quantity, average price.
-   - Total orders, products, and customers.
-   - Create a summary table of all key metrics.
-
-5. **Magnitude Analysis**
-   - Customers by country and gender.
-   - Products by category and average cost.
-   - Total revenue by category and country.
-   - Revenue by individual customers.
-
-6. **Ranking Analysis**
-   - Top 5 and bottom 5 products by revenue.
-   - Top 10 customers by revenue with average order value.
-   - Bottom 3 customers by number of orders.
+- SQL Server
+- T-SQL
+- SQL Server Management Studio (SSMS)
+- Power BI
+- Git
+- GitHub
 
 ---
 
-## 📊 Key Insights
-- **Top Products:** Certain products contribute a large portion of total revenue.  
-- **Top Customers:** Top 10 customers generate a significant portion of sales.  
-- **Revenue Distribution:** Sales are concentrated in specific countries and product categories.  
-- **Customer Insights:** The database includes a wide age range and both genders.  
-- **Business Metrics:** Summary table allows for quick KPI tracking (total sales, average price, total orders, etc.).  
+## SQL Skills Demonstrated
 
-These insights can inform decisions like:
-- Product promotions and inventory management.
-- Customer loyalty programs targeting high-value customers.
-- Regional sales strategies based on country-level analysis.
-
----
-
-## 🚀 How to Run
-1. Open SQL Server Management Studio (SSMS) or any SQL tool that supports T-SQL.  
-2. Ensure the database `DataWarehouseAnalytics` is created and tables are loaded (`dim_customers`, `dim_products`, `fact_sales`).  
-3. Open `My EDA Project.sql` (or the separate SQL scripts).  
-4. Run queries section by section to explore metrics, distributions, and rankings.  
-
----
-
-## 💡 Future Work / Next Steps
-- Create a **Power BI or Tableau dashboard** to visualize key metrics and trends.  
-- Segment customers by revenue, frequency, and recency (RFM analysis).  
-- Forecast future sales trends by product and category.  
-- Incorporate additional KPIs like profit margin and return rates.  
+- SELECT
+- WHERE
+- GROUP BY
+- ORDER BY
+- HAVING
+- INNER JOIN
+- LEFT JOIN
+- Aggregate Functions
+- CASE WHEN
+- Common Table Expressions (CTEs)
+- Window Functions
+- ROW_NUMBER()
+- RANK()
+- DENSE_RANK()
+- Subqueries
+- Data Aggregation
+- Business KPI Analysis
 
 ---
 
-## 📁 Repository Structure
+## Project Structure
+
+```text
+sales-analytics-project
+│
+├── SQL
+│   ├── 01_Database_Exploration.sql
+│   ├── 02_Dimension_Exploration.sql
+│   ├── 03_Date_Analysis.sql
+│   ├── 04_Measures.sql
+│   ├── 05_Magnitude_Analysis.sql
+│   └── 06_Ranking_Analysis.sql
+│
+├── Dashboard
+│   └── Sales Dashboard.pbix
+│
+├── Images
+│   └── dashboard.png
+│
+└── README.md
+```
+
+---
+
+## SQL Analysis
+
+### Database Exploration
+
+- Inspected database tables and columns
+- Reviewed table structures
+- Examined relationships between tables
+
+### Dimension Exploration
+
+- Product Categories
+- Product Subcategories
+- Customer Countries
+- Customer Segments
+
+### Date Analysis
+
+- First Order Date
+- Last Order Date
+- Customer Age Range
+
+### Measures & KPIs
+
+Calculated:
+
+- Total Sales
+- Total Orders
+- Total Customers
+- Total Products
+- Total Quantity Sold
+- Average Product Price
+- Average Order Value
+
+### Magnitude Analysis
+
+Analyzed:
+
+- Revenue by Category
+- Revenue by Country
+- Revenue by Customer
+- Customers by Country
+- Customers by Gender
+- Products by Category
+
+### Ranking Analysis
+
+Identified:
+
+- Top 5 Products by Revenue
+- Bottom 5 Products by Revenue
+- Top 10 Customers by Revenue
+- Bottom Customers by Number of Orders
+
+---
+
+## Key Insights
+
+- Bikes generated the majority of total revenue, making them the company's strongest-performing product category.
+- The United States and Australia were the highest revenue-generating markets.
+- A relatively small group of customers contributed a significant share of overall sales.
+- Customer spending varied considerably, highlighting opportunities for customer segmentation and targeted marketing.
+- The dashboard provides a clear overview of business performance through essential KPIs.
+
+---
+
+## Business Recommendations
+
+Based on the analysis:
+
+- Increase marketing investment in the Bikes category.
+- Expand sales initiatives in high-performing countries.
+- Introduce loyalty programs for high-value customers.
+- Review pricing and promotional strategies for lower-performing product categories.
+- Monitor business performance using interactive Power BI dashboards.
+
+---
+
+## Future Improvements
+
+- Add monthly and yearly sales trend analysis
+- Build a fully interactive Power BI dashboard with slicers
+- Perform RFM customer segmentation
+- Forecast future sales trends
+- Calculate additional KPIs such as Profit Margin and Return Rate
+
+---
+
+## How to Run
+
+1. Open **SQL Server Management Studio (SSMS)**.
+2. Restore or create the **DataWarehouseAnalytics** database.
+3. Import the following tables:
+   - `dim_customers`
+   - `dim_products`
+   - `fact_sales`
+4. Run the SQL scripts in sequence.
+5. Open the Power BI dashboard to explore the visualizations.
+
+---
+
+## About
+
+This project was developed as part of my Data Analytics portfolio to demonstrate practical SQL Server and Power BI skills. It showcases my ability to explore relational databases, analyze business data, build meaningful KPIs, and present actionable insights through interactive dashboards.
+
+If you found this project interesting, feel free to connect with me or explore my other projects on GitHub.
